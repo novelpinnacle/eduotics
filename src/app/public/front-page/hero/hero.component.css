@@ -1,0 +1,101 @@
+
+/*Styles Related to Owl Carousel of Hero section*/
+
+#hero-carousel .owl-carousel .owl-item {
+    height: calc(100vh - 5.625rem);
+}
+
+#hero-carousel .owl-nav{
+    position: absolute;
+    top: calc(50% - 2.1875rem);
+    left: 0;
+    width: 100%;
+}
+
+#hero-carousel .owl-theme .owl-nav [class*=owl-]{
+    background: #fff;
+    color:#3a3a3a;
+    font-size: 2rem;
+    width:3.125rem;
+    height: 3.125rem;
+    border-radius: 100%;
+}
+
+#hero-carousel .owl-theme .owl-nav [class*=owl-]:hover{
+    background: var(--primary-color);
+    color:#fff
+}
+
+#hero-carousel .owl-prev{
+    position: absolute;
+    left: 0.625rem;
+}
+
+#hero-carousel .owl-next{
+    position: absolute;
+    right:0.625rem;
+}
+
+.hero-item {
+    padding-top: 13.25rem;
+    padding-left: 5.6875rem;
+    height: calc(100vh - 5.625rem);
+    background-size: 100% 100%
+}
+
+.hero-item>h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 120%;
+    color: var(--primary-color)
+}
+
+.hero-item>h1>span {
+    color: #993820
+}
+
+.hero-item>p {
+    font-weight: 600;
+    margin-top: 0.625rem;
+    font-size: 1.875rem;
+}
+
+.hero-item>button {
+    margin-top: 3.125rem;
+    outline: none;
+    cursor: pointer;
+    border: 0.125rem solid var(--primary-color);
+    border-radius: 1.25rem;
+    padding: 1.1875rem 2.625rem;
+    background: #fff;
+    font-weight: 37.5rem;
+    font-size: 1.375rem;
+    color: var(--primary-color)
+}
+
+/* Styles For tablet and mobile*/
+@media screen and (max-width:768px){
+    
+    #hero-carousel .owl-carousel .owl-item {
+        height: 450px;
+    } 
+
+    .hero-item {
+        padding-top: 20rem;
+        padding-left: 4rem;
+        background-size: 100% 450px;
+    }
+    
+}
+
+@media screen and (max-width:450px){
+    #hero-carousel .owl-carousel .owl-item {
+        height: 250px;
+    } 
+
+    .hero-item {
+        padding-top: 10rem;
+        padding-left: 4rem;
+        background-size: 100% 250px;
+    }
+}

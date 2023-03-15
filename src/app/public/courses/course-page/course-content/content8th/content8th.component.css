@@ -1,0 +1,41 @@
+section {
+    background: #f7f7f7;
+    box-shadow: 0rem 0.25rem 0.5rem /* 0px 4px 8px */ rgba(58, 58, 58, 0.16);
+    border-radius: 0.625rem; /* 10px */
+    padding: 1.875rem; /* 30px */
+}
+
+h1{
+    font-size: 2rem;
+    margin:20px 0 10px 0;
+}
+
+h2{
+    margin:20px 0 10px 0;
+}
+
+ul{
+    margin-left: 2rem;
+}
+
+ul li{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    max-width: 500px;
+}
+
+th,td{
+    padding:4px 10px;
+    text-align: left;
+    border:1px solid #c5c5c5;
+    background: #fff;
+}
+
+p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}

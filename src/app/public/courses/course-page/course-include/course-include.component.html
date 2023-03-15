@@ -1,0 +1,26 @@
+<div id="course-include" *ngIf="course">
+    <div id="price-tag">
+        <h1><span>Price</span> {{course.price}} INR</h1>
+        <button id="join-now">Join Now</button>
+    </div>
+    <div id="line"></div>
+    <div id="course-include-body">
+        <h2 id="includes-title">Includes</h2>
+        <p class="includes-points" *ngFor="let inc of course.courseIncludes">
+
+            <img [src]="getPathFromRoot(course.folderPath)+'icons/'+inc.includeIconPath"> {{inc.includeTitle}}
+        </p>
+        <!-- <p class="includes-points">
+            <img src="assets/images/courses/icons/download.svg"> 15 downloadable resources.
+        </p>
+        <p class="includes-points">
+            <img src="assets/images/courses/icons/mobile-desktop.svg"> Access on Mobile and Dekstop.
+        </p>
+        <p class="includes-points">
+            <img src="assets/images/courses/icons/assignments.svg"> 15+ Assignments.
+        </p>
+        <p class="includes-points">
+            <img src="assets/images/courses/icons/certificate.svg"> Certificate of Completion.
+        </p> -->
+    </div>
+</div>

@@ -1,0 +1,108 @@
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 5.375rem 11.3125rem; /* 86px 181px */
+    background: #3a3a3a;
+}
+
+.info-box {
+    width: 30%;
+}
+
+.links-box {
+    display: flex;
+    width: 70%;
+    padding-left: 11.5625rem /* 185px */
+}
+
+#logo-image {
+    display: block;
+    width: 19.3125rem; /* 309px */
+    height: 7.875rem; /* 126px */
+}
+
+#eduotics-pvt-ltd {
+    color: #fff;
+    margin-top: 1.5625rem; /* 25px */
+}
+
+address {
+    margin-top: 0.9375rem; /* 15px */
+    font-size: 1.5rem; /* 24px */
+    line-height: 2.0625rem; /* 33px */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.links-col{
+    width:30%;
+}
+
+.contact-col{
+    width:40%;
+    padding-left: 6.25rem; /* 100px */
+}
+
+.links-col h2{
+    color:#fff;
+    margin-bottom: 0.9375rem; /* 15px */
+}
+.links-col a{
+    font-size: 1.5rem; /* 24px */
+    font-weight: normal;
+    margin-bottom: 0.3125rem; /* 5px */
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+}
+.contact-col p{
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 0.3125rem; /* 5px */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width:900px){
+    .contact-col{
+        padding-left: 3rem;
+    }
+}
+
+@media screen and (max-width:768px){
+    .links-box {
+        padding-left: 3rem;
+    }
+    .contact-col{
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width:600px){
+    footer{
+        padding: 5.375rem 3rem; 
+    }
+}
+
+@media screen and (max-width:530px){
+    .links-box{
+        flex-wrap: wrap;
+    }
+    .links-col{
+        width: 50%;
+    }
+    .contact-col{
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width:480px){
+
+
+    .info-box {
+        width: 100%;
+    }
+    
+    .links-box {
+        width:100%;
+        margin-top: 2rem;
+    }
+}

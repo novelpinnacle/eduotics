@@ -1,0 +1,24 @@
+<div id="main">
+    <div id="form-box">
+        <a routerLink="/"><img src="assets/images/eduotics-logo.png" id="logo"></a>
+        <div id="form-wrapper">
+            <h1 class="form-title">Eduotics Login</h1>
+            <form #form="ngForm">
+                <div class="form-group">
+                    <label>Enter Username <span>*</span></label>
+                    <input name="username" [(ngModel)]="loginForm.username" (focus)="status=null" placeholder="Enter Username" required>
+                </div>
+                <div class="form-group">
+                    <label>Enter Password <span>*</span></label>
+                    <input type=password name="password" [(ngModel)]="loginForm.password" (focus)="status=null" placeholder="Enter Password" required>
+                </div>
+                <div class="form-group">
+                    <button type="button" [disabled]="form.invalid" (click)="onSubmit()">
+                        <i *ngIf="loading" class="fa fa-spinner fa-spin"></i> LOGIN
+                    </button>
+                </div>
+            </form>
+        </div>
+        <p class="status error">{{status}}</p>
+    </div>
+</div>

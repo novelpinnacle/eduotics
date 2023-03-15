@@ -1,0 +1,107 @@
+<section>
+    <div class="section-title">
+        <h2>Why Choose <span>Eduotics?</span></h2>
+    </div>
+    <div class="row main-row">
+        <div id="left">
+            <live-class-room *ngIf="circle.active=='LiveClassroom'" [circle]="circle"></live-class-room>
+            <ai-based-learning *ngIf="circle.active=='AiBasedLearning'" [circle]="circle"></ai-based-learning>
+            <electronic-material *ngIf="circle.active=='ElectronicMaterial'" [circle]="circle"></electronic-material>
+            <teaching-system *ngIf="circle.active=='TeachingSystem'" [circle]="circle"></teaching-system>
+            <unbeatable-growth *ngIf="circle.active=='UnbeatableGrowth'" [circle]="circle"></unbeatable-growth>
+        </div>
+        <div id="right">
+            <div class='item-content' *ngIf="circle.active == 'LiveClassroom'">
+                <h1>Live Classroom</h1>
+                <h2>LIVE audio-video connection between the master teachers and students at very low internet
+                    bandwidths.</h2>
+                <div class="row live-row">
+                    <div class="col-left">
+                        <img id="collob-img" src="assets/images/why-eduotics/live-collaborations.svg">
+                    </div>
+                    <div class="col-right text-col">
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Access to the best teachers a click away!
+                        </p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Infinite replay of the LIVE session for
+                            clarification and revision.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='item-content' *ngIf="circle.active == 'AiBasedLearning'">
+                <h1>AI Based Learning</h1>
+                <h2>Proven algorithm-based decisions made from analyzing candidate responses to test questions.</h2>
+                <div class="row live-row">
+                    <div class="col-left">
+                        <img id="collob-img" src="assets/images/why-eduotics/ai.svg">
+                    </div>
+                    <div class="col-right text-col">
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Teaching research based on learning data
+                            of
+                            million students.
+                        </p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Strengthen students’ foundation for
+                            enhanced learning.
+                        </p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Track learning status with personalized
+                            learning report.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='item-content' *ngIf="circle.active == 'ElectronicMaterial'">
+                <h1>Electronic Material</h1>
+                <h2>E-Books in Eduotics are a result of compiling the best from every author, approved syllabuses from
+                    all boards</h2>
+                <div class="row live-row">
+                    <div class="col-left">
+                        <img id="collob-img" src="assets/images/why-eduotics/electronic.svg">
+                    </div>
+                    <div class="col-right text-col">
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Convenient to review at anytime.
+                        </p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Designed by professional teachers.
+
+                        </p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Cover all core concepts for test.</p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Efficient neccessity for test
+                            preparation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='item-content' *ngIf="circle.active == 'TeachingSystem'">
+                <h1>Teaching System</h1>
+                <h2>Organizes brain-teasing live quizzes to push students in unconventional ways with given constraints
+                    in mind</h2>
+                <div class="row live-row">
+                    <div class="col-left">
+                        <img id="collob-img" src="assets/images/why-eduotics/teaching.svg">
+                    </div>
+                    <div class="col-right text-col">
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Interacts live with the students to teach
+                            and mentor them.</p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Recorded lectures by experts with
+                            extensive experience</p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Available for doubt solving and mentoring
+                            support.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='item-content' *ngIf="circle.active == 'UnbeatableGrowth'">
+                <h1>Unbeatable Growth</h1>
+                <h2>Become lifelong learners with India’s best teachers, engaging videos lessons and personalized
+                    learning journeys</h2>
+                <div class="row live-row">
+                    <div class="col-left">
+                        <img id="collob-img" src="assets/images/why-eduotics/growth.svg">
+                    </div>
+                    <div class="col-right text-col">
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Identify the learning objectives.</p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Plan the specific learning activities.
+                        </p>
+                        <p class="why-para"><i class="fa fa-check-circle"></i> Opportunities for students to demonstrate
+                            and practice the knowledge and skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

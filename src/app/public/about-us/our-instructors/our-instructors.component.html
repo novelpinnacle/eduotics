@@ -1,0 +1,12 @@
+<section>
+    <div class="section-title">
+        <h2>Our Instructors</h2>
+    </div>
+    <div class="row">
+        <div class="item" *ngFor="let instructor of instructors">
+            <img [src]="'assets/images/our-instructors/'+instructor.imagePath">
+            <h2>{{instructor.name}}</h2>
+            <h6>{{instructor.subject}}</h6>
+        </div>
+    </div>
+</section>

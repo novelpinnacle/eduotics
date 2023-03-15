@@ -1,0 +1,31 @@
+<section>
+    <div class="section-title">
+        <h2>Browse Our Top Courses</h2>
+    </div>
+    <div class="row">
+        <div *ngFor="let c of topCourses" class="item" style="background-image:url(assets/images/top-courses/{{c.imagePath}});">
+            <h1>{{c.title}}</h1>
+        </div>
+        <!-- <div class="item" style="background-image:url(assets/images/top-courses/neet.png);">
+            <h1>NEET</h1>
+        </div>
+        <div class="item" style="background-image:url(assets/images/top-courses/foundation.png);">
+            <h1>FOUNDATION</h1>
+        </div>
+        <div class="item" style="background-image:url(assets/images/top-courses/coding.png);">
+            <h1>CODING</h1>
+        </div>
+        <div class="item" style="background-image:url(assets/images/top-courses/government.png);">
+            <h1>GOVERNMENT</h1>
+        </div>
+        <div class="item" style="background-image:url(assets/images/top-courses/engineering.png);">
+            <h1>ENGINEERING</h1>
+        </div>
+        <div class="item" style="background-image:url(assets/images/top-courses/skill-development.png);">
+            <h1>SKILL DEVELOPMENT</h1>
+        </div> -->
+    </div>
+   <div class="button-row">
+    <button>View All Courses</button>
+   </div>
+</section>

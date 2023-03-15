@@ -1,0 +1,17 @@
+<section>
+    <div class="text-center">
+        <h1>Send Us a Message</h1>
+        <h2>We’d love to hear from you, please drop us a line if you’ve any query.</h2>
+    </div>
+    <form #form="ngForm" (ngSubmit)="submit(form.value)">
+        <div class="row">
+            <input name="name" ngModel class="form-field" placeholder="Name" required>
+            <input name="email" ngModel class="form-field" placeholder="Email Address" required>
+            <textarea name="message" ngModel class="form-field" placeholder="Message" required></textarea>
+            <div class="text-center full-width">
+                <button [disabled]="form.invalid || disableButton" >Submit</button>
+            </div>
+            <p id="status" *ngIf="status">{{status}}</p>
+        </div>
+    </form>
+</section>

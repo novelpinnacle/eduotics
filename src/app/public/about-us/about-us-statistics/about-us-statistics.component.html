@@ -1,0 +1,7 @@
+<section>
+    <div class="item" *ngFor="let stat of statistics">
+        <img [src]="'assets/images/about-us-statistics/'+stat.imagePath">
+        <h1>{{stat.value}}</h1>
+        <h3>{{stat.title}}</h3>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+<div id="hero-carousel">
+    <owl-carousel-o [options]="heroCarouselOptions">
+        <ng-template carouselSlide *ngFor="let s of slideshows">
+            <div class="hero-item" style="background-image: url('assets/images/hero/{{s.imagePath}}');">
+                <h1 [innerHTML]="s.title"></h1>
+                <p>{{s.description}}</p>
+                <button>{{s.buttonText}}</button>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>

@@ -1,0 +1,65 @@
+section {
+  padding: 8.125rem 11.25rem; /* 130px 180px */
+  background: url(/assets/images/contact/contact.png);
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.item {
+  background-color: #fff;
+  width: calc(33.33% - 6.25rem);
+  padding: 4.4169rem 2.625rem 3.75rem 2.625rem; /* 70.67px 42px 60px 42px */
+  border-radius: 1.25rem; /* 20px */
+  text-align: center;
+}
+
+.item h2:first-of-type,
+address,
+a:first-of-type {
+  margin-top: 2.2919rem; /* 36.67px */
+}
+
+address,
+a {
+  color: #3a3a3a;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.item h2 {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 880px) {
+  .item {
+    padding: 4.4169rem 2.625rem 3.75rem 2.625rem;
+    width: calc(33.33% - 20px);
+  }
+  section {
+    padding: 8.125rem 5rem; /* 130px 180px */
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .item {
+    width: calc(50% - 20px);
+  }
+  .item:nth-child(3) {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 390px) {
+  section {
+    padding: 8.125rem 2rem; /* 130px 180px */
+  }
+  .item {
+    width: calc(50% - 10px);
+  }
+  .item:nth-child(3){
+      margin-top: 20px;
+  }
+}

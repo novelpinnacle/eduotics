@@ -1,0 +1,59 @@
+<section>
+    <div class="section-title">
+        <h2>Value Added Features</h2>
+    </div>
+
+    <div class="row">
+        <div class="item " [ngClass]="{top:i<2,bottom:i>=2}" *ngFor="let v of valueAddedFeatures;let i=index">
+            <h2>{{v.title}} <img src="assets/images/value-added-features/arrow-right.svg"></h2>
+            <div class="img-wrapper">
+                <img src="assets/images/value-added-features/{{v.imagePath}}">
+            </div>
+            <div class="details" [ngClass]="{top:i<2,bottom:i>=2}">
+                <ng-container *ngIf="i>=2">
+                    <h2>{{v.title}} <img src="assets/images/value-added-features/arrow-right.svg"></h2>
+                    <div class="img-wrapper">
+                        <img src="assets/images/value-added-features/{{v.imagePath}}">
+                    </div>
+                </ng-container>
+                <p *ngFor="let p of v.points"><i class="fa fa-check-circle"></i> {{p}}</p>
+            </div>
+        </div>
+        <!-- <div class="item top">
+            <h2>EPQ - Eduotics Proficiency Quotient <img src="assets/images/value-added-features/arrow-right.svg"></h2>
+            <div class="img-wrapper">
+                <img src="assets/images/value-added-features/eduotics-proficiency-quotient.svg">
+            </div>
+            <div class="details top">
+                <p><i class="fa fa-check-circle"></i> EPQ (Eduotics Proficiency Quotient) provides required reports and study analytics to enable a learner to evaluate it's learning milestone.</p>
+                <p><i class="fa fa-check-circle"></i> By combining all variuos input aspects of a user, AI (Artificial Intelligence) - based EPQ plays a key role in analysing and interpreting vast amounts of learner data.</p>
+                <p><i class="fa fa-check-circle"></i> AI (Artificial Intelligence) - based evaluation is used to map the learning curve of each learner.</p>
+            </div>
+        </div>
+        <div class="item bottom">
+            <h2>EA - Eduotics Assistant <img src="assets/images/value-added-features/arrow-right.svg"></h2>
+            <div class="img-wrapper">
+                <img src="assets/images/value-added-features/eduotics-assistance.svg">
+            </div>
+            <div class="details bottom">
+                <h2>EA - Eduotics Assistant <img src="assets/images/value-added-features/arrow-right.svg"></h2>
+                <p><i class="fa fa-check-circle"></i> EPQ (Eduotics Proficiency Quotient) provides required reports and study analytics to enable a learner to evaluate it's learning milestone.</p>
+                <p><i class="fa fa-check-circle"></i> By combining all variuos input aspects of a user, AI (Artificial Intelligence) - based EPQ plays a key role in analysing and interpreting vast amounts of learner data.</p>
+                <p><i class="fa fa-check-circle"></i> AI (Artificial Intelligence) - based evaluation is used to map the learning curve of each learner.</p>
+            </div>
+        </div>
+        <div class="item bottom">
+            <h2>Mentor Assistance <img src="assets/images/value-added-features/arrow-right.svg"></h2>
+            <div class="img-wrapper">
+                <img src="assets/images/value-added-features/mentor-assistance.svg">
+            </div>
+            <div class="details bottom">
+                <h2>Mentor Assistance <img src="assets/images/value-added-features/arrow-right.svg"></h2>
+                <p><i class="fa fa-check-circle"></i> EPQ (Eduotics Proficiency Quotient) provides required reports and study analytics to enable a learner to evaluate it's learning milestone.</p>
+                <p><i class="fa fa-check-circle"></i> By combining all variuos input aspects of a user, AI (Artificial Intelligence) - based EPQ plays a key role in analysing and interpreting vast amounts of learner data.</p>
+                <p><i class="fa fa-check-circle"></i> AI (Artificial Intelligence) - based evaluation is used to map the learning curve of each learner.</p>
+            </div>
+        </div> -->
+    </div>
+
+</section>

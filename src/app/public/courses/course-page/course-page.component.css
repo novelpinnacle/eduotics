@@ -1,0 +1,16 @@
+#main {
+  padding: 0 11.25rem 11.25rem 11.25rem; /* 180px 180px 180px */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#left {
+  width: calc(67.3%);
+}
+
+#right {
+  width: calc(29.48%);
+}
+

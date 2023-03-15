@@ -1,0 +1,8 @@
+<section id="about-us" *ngIf="aboutUs">
+    <div class="left">
+        <h6>About Us</h6>
+        <h1>{{aboutUs.title}}</h1>
+        <div id="description" [innerHTML]="aboutUs.description"></div>
+        <button>{{aboutUs.buttonText}}</button>
+    </div>
+</section>

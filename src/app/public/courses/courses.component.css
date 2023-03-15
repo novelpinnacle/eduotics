@@ -1,0 +1,44 @@
+#menu {
+  padding: 3.75rem 11.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #f7f7f7;
+}
+
+#menu h2 {
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+#menu > a {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  color: #3a3a3a;
+}
+
+@media screen and (max-width:1000px){
+  #menu h2{
+    font-size: 3rem;
+    width:100%;
+    margin-bottom: 2rem;
+  }
+  #menu > a{
+    display: block;
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  #menu {
+    padding: 3.75rem 4rem;
+  }
+  
+  #menu > a{
+      font-size: 2rem;
+  }
+}

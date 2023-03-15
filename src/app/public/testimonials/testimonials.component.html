@@ -1,0 +1,17 @@
+<section id="testimonial">
+    <div class="section-title">
+        <h2>What People Say</h2>
+    </div>
+    <div id="testimonial-carousel">
+        <owl-carousel-o  [options]="testimonialCarouselOptions" (changed)="changed($event)" >
+            <ng-template carouselSlide *ngFor="let t of testimonials;let i = index" [id]="'t-'+(i+1)">
+                <div class="testimonial-item" >
+                    <img [src]="'assets/images/testimonials/'+t.imagePath">
+                    <h4>{{t.name}}</h4>
+                    <h6>{{t.designation}}</h6>
+                    <p>“{{t.review}}”</p>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+</section>

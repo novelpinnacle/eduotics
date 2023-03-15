@@ -1,0 +1,162 @@
+section {
+  padding: 5rem 14.25rem 2.5rem 9.25rem;
+}
+
+.main-row {
+  margin-top: 3.125rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#left {
+  width: 50%;
+}
+
+#right {
+  width: 50%;
+  padding-left: 5.813rem;
+}
+
+#right h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  color: var(--primary-color);
+}
+
+#right h2 {
+  text-align: center;
+  line-height: 120%;
+  position: relative;
+}
+
+#right p {
+  text-align: center;
+  line-height: 120%;
+  position: relative;
+}
+
+#right p i {
+  position: absolute;
+  left: -1.5625rem;
+  top: 0.125rem;
+}
+
+.live-row {
+  align-items: flex-start;
+  margin-top: 5.625rem;
+}
+
+.col-left {
+  width: 23.375rem;
+  width: 50%;
+}
+
+.col-right {
+  padding-left: 4.0625rem;
+  width: 20.9375rem;
+  width: 50%;
+}
+
+#collob-img {
+  max-width: 100%;
+  max-height: 20.125rem;
+  width: 23.375rem;
+}
+
+#right p.why-para {
+  margin-bottom: 0.625rem;
+  text-align: left;
+  font-size: 1.25rem;
+  color: rgba(58, 58, 58, 0.8);
+}
+
+.item-content {
+  position: relative;
+  animation: sample;
+  animation-duration: 1s;
+}
+
+@keyframes sample {
+  from {
+    top: -18.75rem;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-row {
+    font-size: 9.6px;
+  }
+
+  #right {
+    padding-left: 5.813em;
+  }
+
+  #right h1 {
+    font-size: 3.25em;
+  }
+
+  #right p.why-para {
+    margin-bottom: 0.625em;
+    font-size: 1.25em;
+  }
+
+  #right p i {
+    left: -1.5625em;
+    top: 0.125em;
+  }
+
+  .col-right {
+    padding-left: 4.0625em;
+  }
+
+  #collob-img {
+    max-height: 20.125em;
+    width: 23.375em;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  section {
+    padding: 5rem 4rem 2.5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  section {
+    padding: 5rem 10rem 2.5rem 9.25rem;
+  }
+
+  #left {
+    width: 100%;
+    text-align: center;
+  }
+
+  #right {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  @keyframes sample {
+    from {
+      bottom: -18.75rem;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
