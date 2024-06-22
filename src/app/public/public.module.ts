@@ -42,7 +42,8 @@ import { Content10thComponent } from './courses/course-page/course-content/conte
 import { Syllabus9thComponent } from './courses/course-page/course-syllabus/syllabus9th/syllabus9th.component';
 import { MathTexPipe } from '../pipes/math-tex.pipe';
 import { SafePipe } from '../pipes/safe';
-import { CKEditorModule } from 'ckeditor4-angular';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
 const routes: Routes = [
   {
     path: '',
