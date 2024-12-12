@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-schedule-class',
-  templateUrl: './schedule-class.component.html',
-  styleUrls: ['./schedule-class.component.css']
+    selector: 'app-schedule-class',
+    templateUrl: './schedule-class.component.html',
+    styleUrls: ['./schedule-class.component.css'],
+    standalone: false
 })
 export class ScheduleClassComponent implements OnInit {
 

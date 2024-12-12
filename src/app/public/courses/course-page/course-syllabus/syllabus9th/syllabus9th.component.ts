@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'syllabus-9th',
-  templateUrl: './syllabus9th.component.html',
-  styleUrls: ['./syllabus9th.component.css']
+    selector: 'syllabus-9th',
+    templateUrl: './syllabus9th.component.html',
+    styleUrls: ['./syllabus9th.component.css'],
+    standalone: false
 })
 export class Syllabus9thComponent implements OnInit {
 

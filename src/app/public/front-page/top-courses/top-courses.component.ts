@@ -9,9 +9,10 @@ interface TopCourses{
 }
 
 @Component({
-  selector: 'top-courses',
-  templateUrl: './top-courses.component.html',
-  styleUrls: ['./top-courses.component.css']
+    selector: 'top-courses',
+    templateUrl: './top-courses.component.html',
+    styleUrls: ['./top-courses.component.css'],
+    standalone: false
 })
 export class TopCoursesComponent implements OnInit {
 

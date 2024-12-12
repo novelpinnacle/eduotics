@@ -11,9 +11,10 @@ interface GetStartedNow {
 }
 
 @Component({
-  selector: 'get-started-now',
-  templateUrl: './get-started-now.component.html',
-  styleUrls: ['./get-started-now.component.css']
+    selector: 'get-started-now',
+    templateUrl: './get-started-now.component.html',
+    styleUrls: ['./get-started-now.component.css'],
+    standalone: false
 })
 export class GetStartedNowComponent implements OnInit {
 

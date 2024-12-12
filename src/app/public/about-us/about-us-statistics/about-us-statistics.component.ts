@@ -9,9 +9,10 @@ interface AboutUsStatistics {
 }
 
 @Component({
-  selector: 'about-us-statistics',
-  templateUrl: './about-us-statistics.component.html',
-  styleUrls: ['./about-us-statistics.component.css']
+    selector: 'about-us-statistics',
+    templateUrl: './about-us-statistics.component.html',
+    styleUrls: ['./about-us-statistics.component.css'],
+    standalone: false
 })
 export class AboutUsStatisticsComponent implements OnInit {
 

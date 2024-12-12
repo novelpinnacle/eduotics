@@ -12,10 +12,11 @@ interface Slideshow {
 }
 
 @Component({
-  selector: 'hero-section',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'hero-section',
+    templateUrl: './hero.component.html',
+    styleUrls: ['./hero.component.css'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class HeroComponent implements OnInit {
 

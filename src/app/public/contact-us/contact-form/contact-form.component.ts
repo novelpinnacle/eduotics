@@ -3,9 +3,10 @@ import { NgForm } from '@angular/forms';
 import { FrontEndService } from 'src/app/services/frontEnd.service';
 
 @Component({
-  selector: 'contact-form',
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css']
+    selector: 'contact-form',
+    templateUrl: './contact-form.component.html',
+    styleUrls: ['./contact-form.component.css'],
+    standalone: false
 })
 export class ContactFormComponent implements OnInit {
 

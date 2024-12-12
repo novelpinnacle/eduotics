@@ -11,9 +11,10 @@ interface AboutUs {
 }
 
 @Component({
-  selector: 'about-us-main',
-  templateUrl: './about-us-main.component.html',
-  styleUrls: ['./about-us-main.component.css']
+    selector: 'about-us-main',
+    templateUrl: './about-us-main.component.html',
+    styleUrls: ['./about-us-main.component.css'],
+    standalone: false
 })
 export class AboutUsMainComponent implements OnInit {
 

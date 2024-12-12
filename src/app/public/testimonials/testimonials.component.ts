@@ -11,10 +11,11 @@ interface Testimonial {
 }
 
 @Component({
-  selector: 'testimonials',
-  templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.css'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'testimonials',
+    templateUrl: './testimonials.component.html',
+    styleUrls: ['./testimonials.component.css'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class TestimonialsComponent implements OnInit {
 

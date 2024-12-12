@@ -9,9 +9,10 @@ interface ValueAddedFeatures{
 }
 
 @Component({
-  selector: 'value-added-features',
-  templateUrl: './value-added-features.component.html',
-  styleUrls: ['./value-added-features.component.css']
+    selector: 'value-added-features',
+    templateUrl: './value-added-features.component.html',
+    styleUrls: ['./value-added-features.component.css'],
+    standalone: false
 })
 export class ValueAddedFeaturesComponent implements OnInit {
 

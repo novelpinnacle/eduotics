@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'course-top-section',
-  templateUrl: './course-top-section.component.html',
-  styleUrls: ['./course-top-section.component.css']
+    selector: 'course-top-section',
+    templateUrl: './course-top-section.component.html',
+    styleUrls: ['./course-top-section.component.css'],
+    standalone: false
 })
 export class CourseTopSectionComponent implements OnInit {
 

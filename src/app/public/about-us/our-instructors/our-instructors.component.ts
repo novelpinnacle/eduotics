@@ -9,9 +9,10 @@ interface Instructor {
 }
 
 @Component({
-  selector: 'our-instructors',
-  templateUrl: './our-instructors.component.html',
-  styleUrls: ['./our-instructors.component.css']
+    selector: 'our-instructors',
+    templateUrl: './our-instructors.component.html',
+    styleUrls: ['./our-instructors.component.css'],
+    standalone: false
 })
 export class OurInstructorsComponent implements OnInit {
 
