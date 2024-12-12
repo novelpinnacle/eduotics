@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FrontEndService } from 'src/app/services/frontEnd.service';
 
+
+
+
 interface AboutUs {
   id: number
   title: string
