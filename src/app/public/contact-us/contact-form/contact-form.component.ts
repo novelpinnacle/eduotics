@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
 
 @Component({
     selector: 'contact-form',

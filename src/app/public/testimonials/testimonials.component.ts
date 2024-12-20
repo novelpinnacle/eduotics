@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
+
 
 interface Testimonial {
   id?: number

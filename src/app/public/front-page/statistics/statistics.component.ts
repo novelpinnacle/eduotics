@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
 
 interface Statistics{
   title:string
