@@ -1,5 +1,13 @@
 section {
-  padding: 8.75rem 0 11.25rem 0; /* 140px 180px */
+  padding: 2rem; /* 140px 180px */
+  background-color: #fff;
+  width: fit-content;
+  margin: 40px; /* 40px 60px */
+ 
+  
+
+  border-radius: 10%;
+ 
 }
 
 h1 {
@@ -30,6 +38,7 @@ form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  
 }
 
 .form-field {
@@ -41,6 +50,7 @@ form {
   border: none;
   outline: none;
   width: calc(50% - 20px);
+  margin-bottom: 1.25rem; /* 20px */
 }
 
 .form-field::placeholder {
