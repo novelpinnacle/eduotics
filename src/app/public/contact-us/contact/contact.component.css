@@ -1,109 +1,121 @@
-/* Section Styling */
-section {
-  padding: 8.75rem 5rem 11.25rem 5rem; /* Adjusted padding for consistency */
+/* Deck of Cards Layout */
+.card-deck {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: stretch;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: space-evenly; /* Center cards horizontally */
   gap: 20px;
-  box-sizing: border-box;
+  padding: 20px;
 }
 
-/* Item Styling */
-.item {
-  margin-top: 10%;
-  background-color: #fff;
-  width: calc(33.33% - 3.25rem); /* Adjust width */
-  padding: 4.4169rem 2.625rem 3.75rem 2.625rem; 
-  border-radius: 1.25rem; /* Rounded corners */
-  text-align: center;
+/* Individual Card */
+.card {
+  width: 100px; /* Initial size for the icon */
+  height: 100px;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: width 0.5s, height 0.5s;
+}
+
+/* Icon Style */
+.icon {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease; /* Added hover transition */
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s, opacity 0.5s;
 }
 
-.item img {
-  width: 50px; /* Adjust image size */
+.icon img {
+  width: 50px;
   height: 50px;
-  margin-bottom: 15px; /* Space between image and text */
 }
 
-.item h2 {
-  font-weight: 600;
-  margin: 5px 0;
-  font-size: 1.2rem;
+/* Details Style */
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 0.5s, opacity 0.5s;
+  backface-visibility: hidden;
 }
 
-address,
-a {
-  color: #3a3a3a;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 15px; /* Spacing between address and links */
+/* Make iframe responsive */
+.details iframe {
+  width: 100%; /* Make iframe take full width of the details container */
+  height: 100%; /* Make iframe take full height of the details container */
+  border: none; /* Remove default iframe border */
 }
 
-a {
-  display: block;
-  text-decoration: none; /* Remove underline from links */
-  color: #3a3a3a;
-  transition: color 0.2s ease-in-out;
+/* Hover Effect */
+.card:hover {
+  width: 300px; /* Expanded size for details */
+  height: 300px; /* Ensure the card is square to fit the iframe */
 }
 
-a:hover {
-  color: var(--primary-color); /* Hover effect */
+.card:hover .icon {
+  transform: rotateY(180deg);
+  opacity: 0;
 }
 
-.item:hover {
-  transform: translateY(-5px); /* Slight hover effect */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+.card:hover .details {
+  transform: rotateY(0deg);
+  opacity: 1;
 }
 
-/* Media Queries for Improved Responsiveness */
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .card-deck {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center;
+    gap: 10px;
+  }
 
-/* Tablet and Small Screens (max-width: 1024px) */
-@media screen and (max-width: 1024px) {
-  .item {
-    width: calc(50% - 30px); /* Two columns on smaller tablets and wide screens */
+  .card {
+    width: 80%; /* Make cards wider on mobile */
+    height: 100px;
   }
-  section {
-    padding: 6rem 3rem; /* Adjust padding for smaller screens */
-  }
-}
 
-/* Medium Screens (max-width: 768px) */
-@media screen and (max-width: 768px) {
-  .item {
-    width: calc(50% - 20px); /* Two items per row on medium screens */
+  .card:hover {
+    width: 80%; /* Keep the same width on hover for mobile */
+    height: auto; /* Allow height to adjust based on content */
   }
-  section {
-    padding: 6rem 2rem; /* Adjust padding */
-  }
-}
 
-/* Small Screens (max-width: 525px) */
-@media screen and (max-width: 525px) {
-  .item {
-    width: 100%; /* Full width for smaller screens */
+  .details {
+    position: static; /* Show details below the icon on mobile */
+    opacity: 1;
+    transform: rotateY(0deg);
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+    display: none; /* Hide details by default on mobile */
   }
-  .item:nth-child(3) {
-    margin-top: 40px; /* Space for the third item */
-  }
-  section {
-    padding: 6rem 1.5rem; /* Adjust section padding */
-  }
-}
 
-/* Very Small Screens (max-width: 390px) */
-@media screen and (max-width: 390px) {
-  section {
-    padding: 6rem 1.5rem; /* Adjust section padding */
+  .card:hover .details {
+    display: block; /* Show details on hover */
   }
-  .item {
-    width: 100%; /* Full width for very small screens */
+
+  .card:hover .icon {
+    transform: none; /* Disable rotation on mobile */
+    opacity: 1;
   }
-  .item:nth-child(3) {
-    margin-top: 20px; /* Space for third item */
+
+  /* Adjust iframe height for mobile */
+  .details iframe {
+    height: 200px; /* Set a fixed height for the iframe on mobile */
   }
 }

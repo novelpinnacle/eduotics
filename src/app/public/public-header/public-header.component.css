@@ -159,3 +159,10 @@ ul > li > a {
     padding-left: 20px;
   }
 }
+
+.active {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 0.5625rem 0.875rem ;
+  border-radius: 0.33em;
+}

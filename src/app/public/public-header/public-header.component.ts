@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
     selector: 'public-header',
@@ -7,12 +8,20 @@ import { Component, OnInit } from '@angular/core';
     standalone: false
 })
 export class PublicHeaderComponent implements OnInit {
+  showMenu: boolean = false;
+  currentRoute: string = '';
 
-  showMenu:boolean
-
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+      }
+    });
   }
 
+  openSearch() {
+    console.log('Search clicked');
+  }
 }
