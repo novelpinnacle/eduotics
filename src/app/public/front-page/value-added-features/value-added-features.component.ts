@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
 
 interface ValueAddedFeatures{
   id:number
@@ -9,9 +9,10 @@ interface ValueAddedFeatures{
 }
 
 @Component({
-  selector: 'value-added-features',
-  templateUrl: './value-added-features.component.html',
-  styleUrls: ['./value-added-features.component.css']
+    selector: 'value-added-features',
+    templateUrl: './value-added-features.component.html',
+    styleUrls: ['./value-added-features.component.css'],
+    standalone: false
 })
 export class ValueAddedFeaturesComponent implements OnInit {
 

@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'live-class-room',
-  templateUrl: './live-class-room.component.html'
+    selector: 'live-class-room',
+    templateUrl: './live-class-room.component.html',
+    standalone: false
 })
 export class LiveClassRoomComponent implements OnInit {
 

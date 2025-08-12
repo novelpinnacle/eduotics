@@ -1,0 +1,12 @@
+div {
+    background: url(/assets/images/contact/contact.png) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row; /* Default to row direction */
+}
+
+@media screen and (max-width: 500px) {
+    div {
+        flex-direction: column; /* Change to column direction on mobile screens */
+    }
+}

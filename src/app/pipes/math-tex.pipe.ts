@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'tex'
+    name: 'tex',
+    standalone: false
 })
 export class MathTexPipe implements PipeTransform {
 

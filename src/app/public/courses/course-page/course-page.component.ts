@@ -4,9 +4,10 @@ import { CoreService } from 'src/app/services/core.service';
 import courses from "../courses"
 
 @Component({
-  selector: 'course-page',
-  templateUrl: './course-page.component.html',
-  styleUrls: ['./course-page.component.css'],
+    selector: 'course-page',
+    templateUrl: './course-page.component.html',
+    styleUrls: ['./course-page.component.css'],
+    standalone: false
 })
 export class CoursePageComponent implements OnInit {
 

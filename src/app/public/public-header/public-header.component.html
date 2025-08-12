@@ -1,20 +1,24 @@
 <div id="parent">
     <header>
         <div id="left-part">
-            <div id="hamburger" (click)="showMenu=!showMenu"><i class="fa fa-bars"></i></div>
+            <button id="hamburger"   (click)="showMenu=!showMenu" aria-label="Toggle Menu">
+                <mat-icon>menu</mat-icon>
+            </button>
             <div id="logo-wrapper">
                 <img id="logo-image" src="assets/images/eduotics-logo.png">
             </div>
             <div class="line"></div>
             <ul [ngClass]="{show_menu:showMenu}" (click)="showMenu=false">
-                <li><a routerLink="/">Home</a></li>
-                <li><a routerLink="/about-us">About Us</a></li>
-                <li><a routerLink="/courses">Edu Store</a></li>
-                <li><a routerLink="/contact-us">Contact</a></li>
+                <li [class.active]="currentRoute === ''||currentRoute==='/'"><a routerLink="/">Home</a></li>
+                <li [class.active]="currentRoute === '/about-us'"><a routerLink="/about-us">About Us</a></li>
+                <li [class.active]="currentRoute === '/courses'"><a routerLink="/courses">Edu Store</a></li>
+                <li [class.active]="currentRoute === '/contact-us'"><a routerLink="/contact-us">Contact</a></li>
             </ul>
         </div>
         <div id="right-part">
-            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search" style="padding: 0.65rem; margin-right: 0.2rem; border-radius: 2.5rem; ">
+            <i class="fa fa-search" style="transform: translateX(-40px);" (click)="openSearch()"></i>
+
             <div class="line"></div>
             <a class="login-a" href="https://www.eduotics.in/eduotics-users">Login</a>
             <a class="login-a" href="https://www.eduotics.in/eduotics-users/sign-up">Register</a>

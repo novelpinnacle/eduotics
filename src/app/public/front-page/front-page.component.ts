@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
 
 @Component({
-  selector: 'front-page',
-  templateUrl: './front-page.component.html',
-  styleUrls: ['./front-page.component.css']
+    selector: 'front-page',
+    templateUrl: './front-page.component.html',
+    styleUrls: ['./front-page.component.css'],
+    standalone: false
 })
 export class FrontPageComponent implements OnInit {
 

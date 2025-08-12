@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
+
 
 interface Testimonial {
   id?: number
@@ -11,10 +12,11 @@ interface Testimonial {
 }
 
 @Component({
-  selector: 'testimonials',
-  templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.css'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'testimonials',
+    templateUrl: './testimonials.component.html',
+    styleUrls: ['./testimonials.component.css'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class TestimonialsComponent implements OnInit {
 

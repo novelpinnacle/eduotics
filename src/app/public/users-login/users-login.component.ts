@@ -9,9 +9,10 @@ interface Result {
 }
 
 @Component({
-  selector: 'users-login',
-  templateUrl: './users-login.component.html',
-  styleUrls: ['./users-login.component.css']
+    selector: 'users-login',
+    templateUrl: './users-login.component.html',
+    styleUrls: ['./users-login.component.css'],
+    standalone: false
 })
 export class UsersLoginComponent implements OnInit {
 

@@ -13,9 +13,10 @@ interface Course {
 }
 
 @Component({
-  selector: 'courses-list',
-  templateUrl: './courses-list.component.html',
-  styleUrls: ['./courses-list.component.css']
+    selector: 'courses-list',
+    templateUrl: './courses-list.component.html',
+    styleUrls: ['./courses-list.component.css'],
+    standalone: false
 })
 export class CoursesListComponent implements OnInit {
 

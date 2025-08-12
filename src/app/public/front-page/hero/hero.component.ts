@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
 
 interface Slideshow {
   id: number
@@ -12,10 +12,11 @@ interface Slideshow {
 }
 
 @Component({
-  selector: 'hero-section',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'hero-section',
+    templateUrl: './hero.component.html',
+    styleUrls: ['./hero.component.css'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class HeroComponent implements OnInit {
 

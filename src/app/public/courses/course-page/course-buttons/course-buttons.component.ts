@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'course-buttons',
-  templateUrl: './course-buttons.component.html',
-  styleUrls: ['./course-buttons.component.css']
+    selector: 'course-buttons',
+    templateUrl: './course-buttons.component.html',
+    styleUrls: ['./course-buttons.component.css'],
+    standalone: false
 })
 export class CourseButtonsComponent implements OnInit {
 

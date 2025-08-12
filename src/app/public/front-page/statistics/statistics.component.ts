@@ -1,27 +1,62 @@
 import { Component, OnInit } from '@angular/core';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
 
-interface Statistics{
-  title:string
-  value:string
-  imagePath:String  
+interface Statistics {
+  id: number;
+  title: string;
+  value: string; // Keep as string to include the '+' symbol
+  imagePath: string;
 }
 
 @Component({
   selector: 'statistics',
   templateUrl: './statistics.component.html',
-  styleUrls: ['./statistics.component.css']
+  styleUrls: ['./statistics.component.css'],
+  standalone: false,
 })
 export class StatisticsComponent implements OnInit {
+  statistics: Statistics[] = []; // Initialize as an empty array
 
-  statistics:Statistics[]
-
-  constructor(private frontEndService: FrontEndService) { }
+  constructor(private frontEndService: FrontEndService) {}
 
   ngOnInit(): void {
-    this.frontEndService.getStatistics().subscribe((statistics: Statistics[]) => {
-      this.statistics = statistics
-    })
+    this.fetchStatistics();
   }
 
+  fetchStatistics(): void {
+    this.frontEndService.getStatistics().subscribe({
+      next: (statistics: Statistics[]) => {
+        this.statistics = statistics;
+        this.statistics.forEach((stat) => {
+          const counterMax = parseInt(stat.value.replace('+', ''), 10); // Parse value as a number
+          this.animateValue(stat.id, 0, counterMax, 2000); // Adjust duration as needed
+        });
+      },
+      error: (error) => {
+        console.error('Failed to fetch statistics:', error);
+      },
+    });
+  }
+
+  animateValue(id: number, start: number, end: number, duration: number): void {
+    const range = end - start;
+    const increment = end > start ? 1 : -1;
+    const stepTime = Math.abs(Math.floor(duration / range));
+    let current = start;
+
+    // Find the statistic object by ID
+    const stat = this.statistics.find((s) => s.id === id);
+
+    if (stat) {
+      const interval = setInterval(() => {
+        current += increment;
+        stat.value = current + (increment === 1 ? '+' : ''); // Update the value dynamically
+
+        // Stop the interval once the value is reached
+        if (current === end) {
+          clearInterval(interval);
+        }
+      }, stepTime);
+    }
+  }
 }

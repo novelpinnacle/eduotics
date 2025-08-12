@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'teaching-system',
-  templateUrl: './teaching-system.component.html'
+    selector: 'teaching-system',
+    templateUrl: './teaching-system.component.html',
+    standalone: false
 })
 export class TeachingSystemComponent implements OnInit {
 

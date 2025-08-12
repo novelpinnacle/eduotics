@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'electronic-material',
-  templateUrl: './electronic-material.component.html'
+    selector: 'electronic-material',
+    templateUrl: './electronic-material.component.html',
+    standalone: false
 })
 export class ElectronicMaterialComponent implements OnInit {
 

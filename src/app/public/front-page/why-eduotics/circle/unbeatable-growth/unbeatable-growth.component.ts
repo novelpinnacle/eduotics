@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'unbeatable-growth',
-  templateUrl: './unbeatable-growth.component.html'
+    selector: 'unbeatable-growth',
+    templateUrl: './unbeatable-growth.component.html',
+    standalone: false
 })
 export class UnbeatableGrowthComponent implements OnInit {
 

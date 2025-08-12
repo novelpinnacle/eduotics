@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FrontEndService } from 'src/app/services/frontEnd.service';
+import { FrontEndService } from 'src/app/services/frontend.service';
 
 interface TopCourses{
   id:number
@@ -9,9 +9,10 @@ interface TopCourses{
 }
 
 @Component({
-  selector: 'top-courses',
-  templateUrl: './top-courses.component.html',
-  styleUrls: ['./top-courses.component.css']
+    selector: 'top-courses',
+    templateUrl: './top-courses.component.html',
+    styleUrls: ['./top-courses.component.css'],
+    standalone: false
 })
 export class TopCoursesComponent implements OnInit {
 

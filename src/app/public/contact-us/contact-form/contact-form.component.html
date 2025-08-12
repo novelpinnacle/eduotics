@@ -7,7 +7,14 @@
         <div class="row">
             <input name="name" ngModel class="form-field" placeholder="Name" required>
             <input name="email" ngModel class="form-field" placeholder="Email Address" required>
+            <input name="mobile" ngModel class="form-field" placeholder="Mobile no" required>
+            <select  name="subject" ngModel class="form-field" required>
+                <option value="admission">Admission</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+            </select>
             <textarea name="message" ngModel class="form-field" placeholder="Message" required></textarea>
+
             <div class="text-center full-width">
                 <button [disabled]="form.invalid || disableButton" >Submit</button>
             </div>

@@ -1,65 +1,121 @@
-section {
-  padding: 8.125rem 11.25rem; /* 130px 180px */
-  background: url(/assets/images/contact/contact.png);
-  background-size: 100% 100%;
+/* Deck of Cards Layout */
+.card-deck {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: stretch;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: space-evenly; /* Center cards horizontally */
+  gap: 20px;
+  padding: 20px;
 }
 
-.item {
-  background-color: #fff;
-  width: calc(33.33% - 6.25rem);
-  padding: 4.4169rem 2.625rem 3.75rem 2.625rem; /* 70.67px 42px 60px 42px */
-  border-radius: 1.25rem; /* 20px */
-  text-align: center;
+/* Individual Card */
+.card {
+  width: 100px; /* Initial size for the icon */
+  height: 100px;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: width 0.5s, height 0.5s;
 }
 
-.item h2:first-of-type,
-address,
-a:first-of-type {
-  margin-top: 2.2919rem; /* 36.67px */
+/* Icon Style */
+.icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s, opacity 0.5s;
 }
 
-address,
-a {
-  color: #3a3a3a;
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 600;
+.icon img {
+  width: 50px;
+  height: 50px;
 }
 
-.item h2 {
-  font-weight: 600;
+/* Details Style */
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 0.5s, opacity 0.5s;
+  backface-visibility: hidden;
 }
 
-@media screen and (max-width: 880px) {
-  .item {
-    padding: 4.4169rem 2.625rem 3.75rem 2.625rem;
-    width: calc(33.33% - 20px);
-  }
-  section {
-    padding: 8.125rem 5rem; /* 130px 180px */
-  }
+/* Make iframe responsive */
+.details iframe {
+  width: 100%; /* Make iframe take full width of the details container */
+  height: 100%; /* Make iframe take full height of the details container */
+  border: none; /* Remove default iframe border */
 }
 
-@media screen and (max-width: 525px) {
-  .item {
-    width: calc(50% - 20px);
-  }
-  .item:nth-child(3) {
-    margin-top: 40px;
-  }
+/* Hover Effect */
+.card:hover {
+  width: 300px; /* Expanded size for details */
+  height: 300px; /* Ensure the card is square to fit the iframe */
 }
-@media screen and (max-width: 390px) {
-  section {
-    padding: 8.125rem 2rem; /* 130px 180px */
+
+.card:hover .icon {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.card:hover .details {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .card-deck {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center;
+    gap: 10px;
   }
-  .item {
-    width: calc(50% - 10px);
+
+  .card {
+    width: 80%; /* Make cards wider on mobile */
+    height: 100px;
   }
-  .item:nth-child(3){
-      margin-top: 20px;
+
+  .card:hover {
+    width: 80%; /* Keep the same width on hover for mobile */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .details {
+    position: static; /* Show details below the icon on mobile */
+    opacity: 1;
+    transform: rotateY(0deg);
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+    display: none; /* Hide details by default on mobile */
+  }
+
+  .card:hover .details {
+    display: block; /* Show details on hover */
+  }
+
+  .card:hover .icon {
+    transform: none; /* Disable rotation on mobile */
+    opacity: 1;
+  }
+
+  /* Adjust iframe height for mobile */
+  .details iframe {
+    height: 200px; /* Set a fixed height for the iframe on mobile */
   }
 }

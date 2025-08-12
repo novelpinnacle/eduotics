@@ -43,6 +43,7 @@ import { Syllabus9thComponent } from './courses/course-page/course-syllabus/syll
 import { MathTexPipe } from '../pipes/math-tex.pipe';
 import { SafePipe } from '../pipes/safe';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -126,6 +127,8 @@ const routes: Routes = [
 
   ],
   imports: [
+    MatIconModule,
+
     CKEditorModule,
     CarouselModule,
     CommonModule,
@@ -134,4 +137,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class PublicModule {}
+export class PublicModule { }

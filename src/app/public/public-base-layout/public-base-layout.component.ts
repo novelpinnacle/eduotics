@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-public-base-layout',
-  templateUrl: './public-base-layout.component.html',
-  styleUrls: ['./public-base-layout.component.css']
+    selector: 'app-public-base-layout',
+    templateUrl: './public-base-layout.component.html',
+    styleUrls: ['./public-base-layout.component.css'],
+    standalone: false
 })
 export class PublicBaseLayoutComponent implements OnInit {
 
