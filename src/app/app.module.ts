@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WindowRef } from './services/windowRef';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     FormsModule,
@@ -18,6 +20,8 @@ import { WindowRef } from './services/windowRef';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NotFoundComponent,
+
   ],
   providers: [WindowRef],
   bootstrap: [AppComponent]
