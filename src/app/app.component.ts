@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { slideInAnimation } from './animations/route-animations';
 
 declare const gtag: Function;
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
+    animations: [slideInAnimation],
     standalone: false
 })
 export class AppComponent {
@@ -32,6 +34,10 @@ export class AppComponent {
     let percent = (width / 1920);
     let size = (16 * percent).toFixed(2)
     document.getElementsByTagName("html")[0].style.fontSize = size + "px"
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 
 }

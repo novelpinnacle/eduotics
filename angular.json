@@ -44,7 +44,7 @@
             "index": "src/index.html",
             "polyfills": ["zone.js", "src/polyfills.ts"],
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "sourceMap": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -83,8 +83,15 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -94,8 +101,12 @@
           "configurations": {
             "production": {
               "buildTarget": "Eduotics:build:production"
+            },
+            "development": {
+              "buildTarget": "Eduotics:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
